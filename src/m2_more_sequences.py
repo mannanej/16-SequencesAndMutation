@@ -10,8 +10,8 @@ for ITERATING through SEQUENCES, including selections from:
   -- Looking at two sequences in parallel
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Eddie Mannan.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -102,8 +102,13 @@ def shortest_string(strings):
     Type hints:
       :type strings: list[str]   or tuple(str)
     """
+    start = 0
+    for k in range(len(strings)):
+        if len(strings[start]) > len(strings[k]):
+            start = k
+    return strings[start]
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
 
@@ -179,8 +184,13 @@ def index_of_largest_number(numbers, n):
       :type n:       int
 
     """
+    start = 0
+    for k in range(n):
+        if numbers[start] < numbers[k]:
+            start = k
+    return start
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
 
@@ -234,8 +244,13 @@ def number_of_stutters(s):
     Type hints:
        :type s: str
     """
+    total = 0
+    for k in range(1, len(s)):
+        if s[k] == s[k - 1]:
+            total += 1
+    return total
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
 
@@ -307,6 +322,12 @@ def is_palindrome(s):
     Type hints:
       :type s: str
     """
+    start = 0
+    for k in range(len(s)):
+        if s[start] == s[k - 1]:
+            start += 1
+        return True
+    return False
     # ------------------------------------------------------------------
     # TODO: 5. Implement and test this function.
     #     The testing code is already written for you (above).
