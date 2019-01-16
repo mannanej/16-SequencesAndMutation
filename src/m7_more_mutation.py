@@ -4,8 +4,8 @@ by changing the values of instance variables.
 
 Authors: David Mutchler, Amanda Stouder, Chandan Rupakheti, Katie Dion,
          Claude Anderson, Delvin Defoe, Curt Clifton, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Eddie Mannan.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -169,6 +169,7 @@ def RETURN_circle(circle, color):
     where the color is either a string that Rosegraphics understands
     or a rg.Color object.
     """
+
     # TODO: 2. First, READ THE ABOVE TEST CODE.
     #          Make sure that you understand it.
     #          Then, IMPLEMENT and test THIS FUNCTION
